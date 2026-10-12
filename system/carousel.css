@@ -1,0 +1,40 @@
+/* CAROUSEL system — shared styles for 1080x1080 panels.
+   From a build in work/<date>/: <link rel="stylesheet" href="../../system/carousel.css">.
+   Only the frame lives here (masthead, a data table, footer). Add your own recurring components below. */
+@import url("system.css");
+
+.panel{position:relative;width:1080px;height:1080px;overflow:hidden;padding:64px 64px 0;
+  background:var(--grad-bg-light);font-family:var(--font-brand);display:flex;flex-direction:column;}
+
+/* masthead */
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:600;letter-spacing:1.4px;
+  text-transform:uppercase;color:var(--ink-700);}
+.eyebrow .num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
+  border-radius:50%;background:var(--primary-500);color:#fff;font-size:14px;font-weight:700;letter-spacing:0;}
+.title{font-size:46px;font-weight:700;letter-spacing:-1px;line-height:1.05;color:var(--text-strong);margin-top:14px;}
+.title--big{font-size:62px;}
+.sub{font-size:24px;font-weight:400;color:var(--ink-600);margin-top:14px;line-height:1.35;}
+
+/* data table */
+.dt-name{font-size:18px;font-weight:700;color:var(--text-strong);margin:0 0 10px 4px;}
+.dt{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 38px rgba(15,23,42,.09);overflow:hidden;}
+.dt-row{display:grid;align-items:center;padding:0 22px;height:54px;border-top:1px solid var(--ink-100);}
+.dt-row.head{height:50px;border-top:none;background:var(--ink-100);font-weight:600;color:var(--ink-700);font-size:15px;}
+.dt-row .c{font-size:15px;color:var(--ink-700);}
+.dt-row .c.dim{color:var(--ink-400);}
+.dt .pill{display:inline-block;padding:3px 12px;border-radius:999px;font-size:13px;font-weight:600;}
+.pill--a{background:var(--primary-100);color:var(--primary-800);}
+.pill--b{background:var(--ink-200);color:var(--ink-700);}
+/* selected column / row outline */
+.sel{position:absolute;border:2.5px solid var(--primary-500);border-radius:10px;
+  box-shadow:0 0 0 4px rgba(99,102,241,.10);pointer-events:none;}
+.sel-tag{position:absolute;font-size:15px;font-weight:600;color:var(--primary-600);}
+
+.arrow{color:var(--ink-800);}
+
+/* footer */
+.wm{position:absolute;right:60px;bottom:50px;width:146px;}
+.wm img{display:block;width:100%;}
+.dots{position:absolute;left:64px;bottom:58px;display:flex;gap:9px;}
+.dots span{width:9px;height:9px;border-radius:50%;background:var(--ink-200);}
+.dots span.on{background:var(--primary-500);width:26px;border-radius:5px;}

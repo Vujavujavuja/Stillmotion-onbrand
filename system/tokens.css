@@ -1,0 +1,19 @@
+/* PLACEHOLDER design tokens — replace every value with your brand's real ones.
+   Run 00-START-figma.md + 00-START-brand.md; they write system/figma-map.md and system/brand-map.md,
+   then copy the mapped hexes and fonts here. Ramp names are generic on purpose: primary / secondary / ink. */
+:root{
+  /* fonts — one variable each, swap once */
+  --font-brand:'Inter Tight','Helvetica Neue','Arial',sans-serif;
+  --font-mono:ui-monospace,'SF Mono',Menlo,monospace;
+  /* primary ramp */ --primary-950:#1E1B4B; --primary-900:#312E81; --primary-800:#3730A3; --primary-700:#4338CA; --primary-600:#4F46E5; --primary-500:#6366F1; --primary-400:#818CF8; --primary-300:#A5B4FC; --primary-200:#C7D2FE; --primary-100:#E0E7FF; --primary-50:#EEF2FF;
+  /* secondary ramp */ --secondary-700:#C2410C; --secondary-600:#EA580C; --secondary-500:#F97316; --secondary-400:#FB923C; --secondary-300:#FDBA74; --secondary-200:#FED7AA; --secondary-100:#FFEDD5; --secondary-50:#FFF7ED;
+  /* ink = neutral / text ramp */ --ink-950:#020617; --ink-900:#0F172A; --ink-800:#1E293B; --ink-700:#334155; --ink-600:#475569; --ink-500:#64748B; --ink-400:#94A3B8; --ink-300:#CBD5E1; --ink-200:#E2E8F0; --ink-100:#F1F5F9; --ink-50:#F8FAFC; --white:#FFFFFF;
+  /* functional */ --pass:#16A34A; --pass-tint:#ECFDF5; --warn:#F59E0B; --warn-tint:#FFFBEB; --fail:#E11D48; --fail-tint:#FFF1F2;
+  /* sanctioned gradients — full-frame backgrounds only, never on elements. List yours in brand-map.md. */
+  --grad-bg-light:linear-gradient(168deg,#FCFDFE 0%,#EEF1F6 100%);
+  --grad-bg-tint:linear-gradient(90deg,var(--primary-100) 0%,var(--secondary-100) 100%);
+
+  /* semantic */ --text-strong:var(--ink-900); --text-body:var(--ink-700); --text-muted:var(--ink-500);
+  --bg:var(--ink-50); --card:var(--white); --line:var(--ink-200); --accent:var(--primary-500);
+  --radius:16px; --shadow:0 12px 30px rgba(15,23,42,.08);
+}

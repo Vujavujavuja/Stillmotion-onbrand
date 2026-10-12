@@ -1,0 +1,20 @@
+/* Base styles — link this + tokens.css from a build. Set .canvas to the exact target size. */
+@import url("tokens.css");
+*{margin:0;padding:0;box-sizing:border-box;}
+.canvas{font-family:var(--font-brand);background:var(--bg);color:var(--text-strong);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;display:flex;flex-direction:column;}
+.mono{font-family:var(--font-mono);}
+/* type scale */
+.t-title{font-weight:700;letter-spacing:-.6px;line-height:1.12;color:var(--text-strong);}
+.t-h2{font-weight:600;letter-spacing:-.3px;color:var(--text-strong);}
+.t-body{font-weight:400;color:var(--text-body);line-height:1.45;}
+.t-eyebrow{font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:var(--text-muted);}
+/* card + caption */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);}
+.caption{font-weight:400;color:var(--text-body);}.caption b{font-weight:600;color:var(--text-strong);}
+/* stroke icon defaults (brand icons preferred; Universal Icons MCP fallback) */
+.bi{fill:none;stroke:var(--primary-600);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.bi--ink{stroke:var(--text-strong);}.bi--secondary{stroke:var(--secondary-600);}.bi--pass{stroke:var(--pass);}.bi--fail{stroke:var(--fail);}
+/* pass/fail dots */
+.tick{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:var(--pass);}
+.ban{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;border:2px solid var(--fail);}
