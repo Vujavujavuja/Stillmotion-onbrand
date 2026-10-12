@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{--navy:#0F172A;--blue:#6366F1;--blue6:#4F46E5;--blue50:#EEF2FF;--blue100:#E0E7FF;
+        --crim:#E11D48;--crim50:#FFF1F2;--bg:#F8FAFC;--body:#334155;--mut:#64748B;--line:#E2E8F0;}
+  body{font-family:'Inter Tight','Arial',sans-serif;background:var(--bg);width:1500px;height:900px;color:var(--navy);
+       padding:46px 50px;-webkit-font-smoothing:antialiased;}
+  h1{font-size:30px;font-weight:700;letter-spacing:-.6px;}
+  .sub{margin-top:6px;font-size:15px;color:var(--body);}
+  .stage{font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--mut);margin:18px 0 10px;}
+  .row{display:flex;align-items:stretch;gap:14px;}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 22px rgba(15,23,42,.07);padding:16px 18px;}
+  .gate{border:1.6px solid var(--crim);background:var(--crim50);} .gate .h{color:var(--crim);}
+  .rec{border:1.6px solid var(--blue);background:var(--blue50);} .rec .h{color:var(--blue6);}
+  .tagm{font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;opacity:.8;}
+  .card .h{font-size:17px;font-weight:700;letter-spacing:-.2px;}
+  .card .m{margin-top:5px;font-size:13.5px;color:var(--body);line-height:1.4;}
+  .down{display:flex;justify-content:center;color:var(--blue);font-size:24px;margin:6px 0;}
+  .sys{border:1.6px solid var(--blue);background:var(--blue50);text-align:center;} .sys .h{color:var(--blue6);}
+  .track{flex:1;} .track .top{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+  .track .n{width:26px;height:26px;border-radius:8px;background:var(--navy);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+  .track ul{margin:6px 0 0 2px;padding:0;list-style:none;}
+  .track li{position:relative;padding-left:16px;font-size:13px;color:var(--body);line-height:1.55;}
+  .track li::before{content:"";position:absolute;left:2px;top:8px;width:5px;height:5px;border-radius:50%;background:var(--blue);}
+  .qa{margin-top:14px;display:flex;align-items:center;gap:14px;border:1.5px dashed var(--blue);border-radius:14px;background:#fff;padding:14px 20px;}
+  .qa .lab{font-size:13px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--blue6);}
+  .qa .t{font-size:15px;color:var(--navy);font-weight:600;} .qa .loop{margin-left:auto;color:var(--blue);font-size:22px;font-weight:700;}
+  .hard{margin-top:14px;border-radius:14px;background:var(--navy);color:#fff;padding:15px 20px;display:flex;align-items:center;gap:12px;}
+  .hard .x{color:#FF9DB1;font-weight:700;}
+</style></head>
+<body>
+  <h1>Stillmotion — how it works</h1>
+  <div class="sub">One project · three tracks · a shared, real-asset source of truth. New work lives in dated <code>work/</code> subfolders.</div>
+
+  <div class="stage">0 · Foundation — starting a new project</div>
+  <div class="row">
+    <div class="card gate" style="flex:1"><div class="h">00 · START — Figma <span class="tagm">· gate</span></div><div class="m">Read Figma assets · ask · write <b>figma-map.md</b> (tokens, icons+IDs, logos, flagged gaps)</div></div>
+    <div class="card gate" style="flex:1"><div class="h">00 · START — Brand <span class="tagm">· gate</span></div><div class="m">Read guidelines · ask · write <b>brand-map.md</b> (palette, fonts, accent &amp; state rules)</div></div>
+    <div class="card rec" style="flex:1"><div class="h">00 · START — Examples <span class="tagm">· recommended</span></div><div class="m">Ask for "golden" examples to emulate (&amp; anti-examples) → <b>examples/</b></div></div>
+  </div>
+  <div class="down">&#8595;</div>
+  <div class="card sys"><div class="h">system/ + examples/ — the only sanctioned source</div><div class="m"><b>tokens.css · system.css · figma-map.md · brand-map.md · examples/ · fonts</b></div></div>
+
+  <div class="down">&#8595;</div>
+  <div class="stage">1 · Intake</div>
+  <div class="card" style="text-align:center"><div class="h">Classify the input &amp; ask for what's missing</div><div class="m">spec?&nbsp; · &nbsp;reference mockup?&nbsp; · &nbsp;Figma frame?&nbsp; · &nbsp;target size?&nbsp; · &nbsp;which brand?</div></div>
+
+  <div class="down">&#8595;</div>
+  <div class="stage">2 · Tracks &nbsp;<span style="text-transform:none;font-weight:500;color:var(--body)">(review the matching <code>examples/</code> first)</span></div>
+  <div class="row">
+    <div class="card track"><div class="top"><span class="n">A</span><span class="h">Graphics</span></div>
+      <ul><li>Build HTML artboard (tokens + mapped icons)</li><li>Render @2× (headless Chrome)</li><li>Single PNG + stacked PDF carousel</li></ul></div>
+    <div class="card track"><div class="top"><span class="n">B</span><span class="h">Figma-Handoff</span></div>
+      <ul><li>Scoped, inlined, layer-named HTML</li><li>One combined file (no collisions)</li><li>Batch-import to Figma → designer polish</li></ul></div>
+    <div class="card track"><div class="top"><span class="n">C</span><span class="h">Video</span></div>
+      <ul><li>Remotion / HyperFrames — or LTX-2 clips</li><li>ElevenLabs voiceover · ACE-Step music</li><li>Assemble (ffmpeg / moviepy) → MP4</li></ul></div>
+  </div>
+
+  <div class="qa"><span class="lab">QA loop</span><span class="t">render → compare to the reference / examples → flag deviations → fix</span><span class="loop">&#8635;</span></div>
+
+  <div class="hard"><span class="x">HARD RULE</span><span>Only <b>real, mapped</b> assets. Never fabricate a brand asset — <b>STOP &amp; flag</b> any gap. Anti-slop: no emoji, element gradients, 3D, or stock.</span></div>
+</body></html>
