@@ -1,0 +1,16 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../system/system.css">
+<style>
+  /* set the EXACT target size; this == the render window (artboard pattern) */
+  .canvas{width:1080px;height:1350px;padding:58px;}
+  .t-title{font-size:48px;}
+  .diagram{flex:1;margin:32px 0 24px;}
+  .caption{font-size:25px;}
+</style></head>
+<body>
+  <div class="canvas" data-layer="Graphic">
+    <div class="t-title" data-layer="Title">Title strip (secondary hook)</div>
+    <div class="card diagram" data-layer="Diagram"><!-- ~70% — build the diagram from MAPPED assets only --></div>
+    <div class="caption" data-layer="Caption"><b>Caption</b> — one short line.</div>
+  </div>
+</body></html>
