@@ -1,0 +1,36 @@
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Session output lives in ONE place: work/ (all gitignored).
+# Only intentional edits to examples/, system/, docs/, templates/, .claude/ are committed.
+work/*
+!work/.gitkeep
+!work/README.md
+scratch/
+_scratch/
+tmp/
+out/
+.cache/
+*.log
+
+# Large models — install on demand (see system/whisper-models/README.md)
+system/whisper-models/*.bin
+
+# Large raw Figma dumps (regenerate; the .tsv indexes hold every node)
+system/figma-assets/_raw-node-*.json
+
+# Agent/skill-manager & tooling cruft
+.agents/
+.windsurf/
+.cursor/
+.codeium/
+skills-lock.json
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "icons": {
+      "command": "npx",
+      "args": ["-y", "mcp-universal-icons"]
+    },
+    "figma-dev-mode": {
+      "type": "http",
+      "url": "http://127.0.0.1:3845/mcp"
+    }
+  }
+}
